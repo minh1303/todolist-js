@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo List</title>
+    <link rel="stylesheet" href="./style.css">
+  </head>
+  <body>
+    <script type="module" src="./src/main.js"></script>
+    <header>
+      <h1>Todo List</h1>
+    </header>
+    <section>
+      <h2>Projects</h2>
+      <div id="projectcontainer" class="container"></div>
+      <div class="buttons">
+        <button id="addprojectbutton">Add project</button>
+        <form id="addingProjectForm" class="hidden">
+          <label for="name">Name</label><input id="name" type="text">
+          <button id="saveprojectbutton">Save</button>
+          <button id="cancelprojectbutton">Cancel</button>
+        </form>
+      </div>
+
+
+    </section>
+
+    <section id="todosection" class="hidden">
+      <h2>Todos</h2>
+      <h3>Current project: <span id="currentprojectname"></span></h3>
+      <div id="todoscontainer" class="container"></div>
+      <div class="buttons">
+        <button id="addtodobutton">Add todo</button>
+        <form id="addingTodoForm" class="hidden">
+          <label for="todoname">Name <input id="todoname" type="text"></label>
+          <label for="tododescription">Description <input id="tododescription" type="text"></label>
+          <label for="tododuedate">Due <input id="tododuedate" type="text"></label>
+          <label for="todopiority">Piority <select id="todopiority"><option value="0">0</option><option value="1">1</option><option value="2">2</option></select></label>
+          <button id="savetodobutton">Save</button>
+          <button id="canceltodobutton">Cancel</button>
+        </form>
+    </section>
+  </body>
+</html>
