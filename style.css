@@ -42,7 +42,8 @@ section {
   border-radius: 10px;
 }
 
-section h2, section h3 {
+section h2,
+section h3 {
   text-align: center;
   margin-bottom: 30px;
 }
@@ -52,7 +53,6 @@ section h2, section h3 {
   grid-template-columns: repeat(3, 1fr);
   justify-content: center;
   align-items: center;
-
 }
 
 .project {
@@ -71,7 +71,6 @@ section h2, section h3 {
   margin-top: 10px;
 }
 
-
 .buttons {
   display: flex;
   flex-wrap: wrap;
@@ -83,7 +82,7 @@ section h2, section h3 {
 }
 
 .hidden {
-  display: none;
+  display: none !important;
 }
 form {
   display: flex;
@@ -95,16 +94,14 @@ form {
   gap: 10px;
 }
 
-
 .tododisplay {
   display: flex;
   flex-direction: column;
   justify-content: center;
   text-align: center;
-  margin: 20px;
+  margin: 5px;
   border-radius: 10px;
 }
-
 
 .todotitle {
   font-weight: bold;
@@ -114,11 +111,55 @@ form {
   background-color: red;
 }
 
-
 .piority-1 {
   background-color: yellow;
 }
 
 .piority-2 {
   background-color: blue;
+}
+
+#todoscontainer {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  justify-content: center;
+}
+
+#todosection {
+  color: whitesmoke;
+  width: 80%;
+  margin: auto;
+  background-color: rgb(59, 58, 58);
+  margin-top: 20px;
+  border-radius: 10px;
+  text-align: center;
+  display: grid;
+  grid-template-columns: 30% 70%;
+}
+
+#todosection h2, #todosection h3 {
+  grid-column: 1/3;
+}
+
+
+
+#todosection > #tasks {
+  width:100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#viewtask {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+#todosection .buttons {
+  grid-column: 1/3;
 }

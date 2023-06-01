@@ -40,6 +40,15 @@ class DOMStuff {
     const todos = this.currentProject.todos;
     todos.forEach((todo) => {
       const display = document.createElement("div");
+      display.addEventListener("click", () => {
+        const todoTitle = document.getElementById("tasktitle")
+        const todoDescription = document.getElementById("taskdescription")
+        const todoPiority = document.getElementById("taskpiority")
+        todoTitle.innerText = `Title: ${todo.title}`;
+        todoDescription.innerText = `Description: ${todo.description}`;
+        todoPiority.innerText = `Piority: ${todo.piority}`;
+
+      })
       display.classList.add("tododisplay");
       display.classList.add(`piority-${todo.piority}`)
       const title = document.createElement("p");
@@ -62,8 +71,6 @@ class DOMStuff {
 
     const todoDescription = document.getElementById("tododescription");
 
-    const todoDueDate = document.getElementById("tododuedate");
-
     const todoPiority = document.getElementById("todopiority");
 
     const addTodoButton = document.getElementById("addtodobutton");
@@ -78,7 +85,7 @@ class DOMStuff {
     saveTodoButton.addEventListener("click", (e) => {
       e.preventDefault();
       todoForm.classList.add("hidden");
-      const newTodo = new Todo(todoName.value, todoDescription.value, todoDueDate.value, todoPiority.value);
+      const newTodo = new Todo(todoName.value, todoDescription.value, todoPiority.value);
       this.currentProject.addTodo(newTodo);
       Project.updateProject(this.currentProject)
       this.displayTodos()
